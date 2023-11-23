@@ -2,10 +2,10 @@
 // tranne nome e cognome, gli altri campi sono opzionali) per costruire l'oggetto Person.
 public class BuilderPerson {
 
-    private final String firstName;
-    private final String lastName;
-    private int age;
-    private String address;
+    public String firstName;
+    public String lastName;
+    public int age;
+    public String address;
 
     public BuilderPerson(String firstName, String lastName) {
         this.firstName = firstName;
@@ -24,6 +24,6 @@ public class BuilderPerson {
     }
 
     public Person build() {
-        return new Person(firstName, lastName, age, address);
+        return new Person(this);
     }
 }
